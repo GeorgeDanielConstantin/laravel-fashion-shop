@@ -1,1 +1,11 @@
-@import '~bootstrap/scss/bootstrap'
+@import "~bootstrap/scss/bootstrap";
+.jumbotron {
+    min-height: 100vh;
+}
+img {
+    max-height: 150px;
+}
+
+a {
+    text-decoration: none;
+}
