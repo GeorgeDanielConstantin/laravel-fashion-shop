@@ -3,8 +3,8 @@
 @section('title', 'Homepage')
 
 @section('content')
-{{-- <a href="{{ route('shoes.index') }}">
+<a href="{{ route('shoes.index') }}">
   <i class="bi bi-eye-fill"></i>
-</a> --}}
+</a>
 
 @endsection

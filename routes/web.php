@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Shoe;
 use App\Http\Controllers\ShoeController;
 
 /*
@@ -14,8 +15,10 @@ use App\Http\Controllers\ShoeController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', function (Shoe $shoe) {
+
+    $shoes = Shoe::all();
+    return view('home', compact('shoes'));
+})->name('homepage');
 
 Route::resource('shoes', ShoeController::class); 

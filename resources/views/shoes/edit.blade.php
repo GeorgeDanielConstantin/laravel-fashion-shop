@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'edit a shoe item')
+@section('title', 'Modifica')
 
 @section('cdn')
 {{-- Bootstrap Icons --}}
@@ -8,7 +8,6 @@
 @endsection
 
 @section('content')
-  <h1 class="my-3">Insert details :</h1>
 <form action="{{ route('shoes.update', $shoe) }}" method="POST" class="row gy-3">
 
 @csrf
@@ -22,44 +21,54 @@
     {{ $message }}
   </div>
   @enderror
+  <div>
 
-  <label for="modello" class="form-label">Modello</label>
-  <input type="text" class="form-control @error('modello') is-invalid @enderror" id="modello" name="modello" value="{{ old('modello') ?? $shoe->modello }}">
-  @error('modello')
-  <div class="invalid-feedback">
-    {{ $message }}
+    <label for="modello" class="form-label">Modello</label>
+    <input type="text" class="form-control @error('modello') is-invalid @enderror" id="modello" name="modello" value="{{ old('modello') ?? $shoe->modello }}">
+    @error('modello')
+    <div class="invalid-feedback">
+      {{ $message }}
+    </div>
   </div>
   @enderror
+  <div>
 
-  <label for="image" class="form-label">Immagine</label>
-  <input type="text" class="form-control @error('image') is-invalid @enderror" id="image" name="image" value="{{ old('image') ?? $shoe->image }}">
-  @error('image')
-  <div class="invalid-feedback">
-    {{ $message }}
+    <label for="image" class="form-label">Immagine</label>
+    <input type="text" class="form-control @error('image') is-invalid @enderror" id="image" name="image" value="{{ old('image') ?? $shoe->image }}">
+    @error('image')
+    <div class="invalid-feedback">
+      {{ $message }}
+    </div>
   </div>
   @enderror
+  <div>
 
-  <label for="colore" class="form-label">Colore</label>
-  <input type="text" class="form-control @error('colore') is-invalid @enderror" id="colore" name="colore"  value="{{ old('colore') ?? $shoe->colore }}">
-  @error('colore')
-  <div class="invalid-feedback">
-    {{ $message }}
+    <label for="colore" class="form-label">Colore</label>
+    <input type="text" class="form-control @error('colore') is-invalid @enderror" id="colore" name="colore"  value="{{ old('colore') ?? $shoe->colore }}">
+    @error('colore')
+    <div class="invalid-feedback">
+      {{ $message }}
+    </div>
   </div>
   @enderror
-
-  <label for="taglia" class="form-label">Taglia</label>
-  <input type="text" class="form-control @error('taglia') is-invalid @enderror" id="taglia" name="taglia"  value="{{ old('taglia') ?? $shoe->taglia }}">
-  @error('taglia')
-  <div class="invalid-feedback">
-    {{ $message }}
+  <div>
+    
+    <label for="taglia" class="form-label">Taglia</label>
+    <input type="text" class="form-control @error('taglia') is-invalid @enderror" id="taglia" name="taglia"  value="{{ old('taglia') ?? $shoe->taglia }}">
+    @error('taglia')
+    <div class="invalid-feedback">
+      {{ $message }}
+    </div>
   </div>
   @enderror
+  <div>
 
-  <label for="prezzo" class="form-label">Prezzo</label>
-  <input type="text" class="form-control @error('prezzo') is-invalid @enderror" id="prezzo" name="prezzo"  value="{{ old('prezzo') ?? $shoe->prezzo }}">
-  @error('prezzo')
-  <div class="invalid-feedback">
-    {{ $message }}
+    <label for="prezzo" class="form-label">Prezzo</label>
+    <input type="text" class="form-control @error('prezzo') is-invalid @enderror" id="prezzo" name="prezzo"  value="{{ old('prezzo') ?? $shoe->prezzo }}">
+    @error('prezzo')
+    <div class="invalid-feedback">
+      {{ $message }}
+    </div>
   </div>
   @enderror
 </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'create a shoe item')
+@section('title', 'Nuovo prodotto')
 
 @section('content')
   <h1 class="my-3">Insert details :</h1>

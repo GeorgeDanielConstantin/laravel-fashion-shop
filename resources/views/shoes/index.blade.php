@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Index')
+@section('title', 'Prodotti')
 @section('cdn')
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 @endsection
@@ -8,9 +8,9 @@
 @section('content')
 
 <form class="d-flex my-4" role="search">
-        <input class="form-control me-2" type="search" name="term" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
-    </form> 
+  <input class="form-control me-2" type="search" name="term" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-primary" type="submit">Search</button>
+</form> 
 
 <table class="table">
   <thead>
@@ -39,7 +39,7 @@
           <i class="bi bi-eye-fill"></i>
         </a>
         <a href="{{ route('shoes.edit', $shoe) }}">
-          <i class="bi bi-pencil-fill text-primary"></i>
+          <i class="bi bi-pen-fill text-primary"></i>
         </a>
         <button class="bi bi-trash3-fill text-danger btn-trash" data-bs-toggle="modal" data-bs-target="#delete-modal-{{ $shoe->id }}"></button>
       </td>

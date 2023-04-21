@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'shoe')
+@section('title', 'Dettaglio')
 
 @section('content')
 <div class="card">
@@ -26,5 +26,9 @@
     </ul>
 
   </div>
+
+  <a href="{{ route('shoes.index') }}" class="btn btn-outline-primary  my-5 mx-3">
+  Torna alla lista
+  </a>
 </div>
 @endsection
